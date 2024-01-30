@@ -28,4 +28,21 @@ public class EditorialControlador {
     public Editorial BuscarUno(@PathVariable (name = "id")int id){
     return servicio.BuscarUno(id);
     }
+    @PutMapping
+    public Editorial modificarUno(@RequestBody Editorial e){
+    return servicio.modificarUno(e);
+    }
+    @GetMapping("/filtro/{direccion}")
+    public List<Editorial> FiltroPorDireccion (@PathVariable (name = "direccion") String direccion){
+    return servicio.filtroPorDireccion(direccion);
+    }
+    @GetMapping("/filtro2/{nombre}")
+    public List <Editorial> FiltroPorNombre(@PathVariable(name = "nombre") String nombre){
+    return servicio.filtroPorNombre(nombre);
+    }
+
+    @GetMapping("/filtro3/{letra}")
+    public List<Editorial> FiltroPorLetra(@PathVariable(name = "letra")char letra){
+    return servicio.filtroPorLetra(letra);
+    }
 }

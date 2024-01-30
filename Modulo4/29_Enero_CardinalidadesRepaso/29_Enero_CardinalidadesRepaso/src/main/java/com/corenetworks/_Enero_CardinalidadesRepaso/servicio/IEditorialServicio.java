@@ -10,4 +10,9 @@ public interface IEditorialServicio {
     void EliminarUno(int id);
     List<Editorial> obtenerTodos();
     Editorial BuscarUno(int id);
+
+    List<Editorial> filtroPorDireccion(String direccion);
+
+    List<Editorial> filtroPorNombre(String nombre);
+    List <Editorial> filtroPorLetra(char letra);
 }
