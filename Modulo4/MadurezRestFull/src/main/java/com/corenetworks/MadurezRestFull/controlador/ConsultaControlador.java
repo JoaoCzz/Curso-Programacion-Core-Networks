@@ -18,18 +18,18 @@ public class ConsultaControlador {
 
     @GetMapping()
     public List<ConsultaMedica> FindAll() {
-        return servicio.FindAllConsultas();
+        return servicio.BuscarTodos();
     }
 
     @PostMapping
     public ResponseEntity<ConsultaMedica> insert(@RequestBody ConsultaMedica c) {
-        ConsultaMedica CBB = servicio.insertConsulta(c);
+        ConsultaMedica CBB = servicio.crear(c);
         return new ResponseEntity<>(CBB, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ConsultaMedica> FindById(@PathVariable int id) {
-        ConsultaMedica cm = servicio.FindConsultaforID(id);
+        ConsultaMedica cm = servicio.BuscarPorId(id);
         if (cm == null) {
             throw new ExepcionNoEncontrado("Recurso no encontrado " + id);
         }
@@ -38,20 +38,20 @@ public class ConsultaControlador {
 
     @PutMapping
     public ResponseEntity<ConsultaMedica> Editar(@RequestBody ConsultaMedica c) {
-        ConsultaMedica cm = servicio.FindConsultaforID(c.getIdConsulta());
+        ConsultaMedica cm = servicio.BuscarPorId(c.getIdConsulta());
         if (cm == null) {
             throw new ExepcionNoEncontrado("No existe esa consulta medica");
         }
-            return new ResponseEntity<>(servicio.EditConsulta(c), HttpStatus.OK);
+            return new ResponseEntity<>(servicio.editar(c), HttpStatus.OK);
         }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar( @PathVariable(name = "id") int id){
-        ConsultaMedica cmBBDD= servicio.FindConsultaforID(id);
+        ConsultaMedica cmBBDD= servicio.BuscarPorId(id);
         if (cmBBDD==null){
             throw new ExepcionNoEncontrado("No existe esa consulta medica");
         }
-        servicio.DeleteConsulta(id);
+        servicio.eliminar(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

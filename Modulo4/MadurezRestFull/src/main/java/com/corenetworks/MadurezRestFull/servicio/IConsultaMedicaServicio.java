@@ -4,11 +4,6 @@ import com.corenetworks.MadurezRestFull.modelo.ConsultaMedica;
 
 import java.util.List;
 
-public interface IConsultaMedicaServicio {
-    ConsultaMedica FindConsultaforID(int id);
-    List <ConsultaMedica> FindAllConsultas();
+public interface IConsultaMedicaServicio extends ICRUD<ConsultaMedica,Integer> {
 
-    ConsultaMedica insertConsulta(ConsultaMedica c);
-    ConsultaMedica EditConsulta(ConsultaMedica c);
-    void DeleteConsulta(int id);
 }
