@@ -1,0 +1,26 @@
+<p>Hola</p>
+
+Escribe tu nombre: <input type="text" [(ngModel)]="nombre">
+<br>
+
+Escribe tu dni: <input type="text" [(ngModel)]="dni">
+<br>
+Escribe tu edad: <input type="text" [(ngModel)]="edad">
+<br>
+Curso Solicitado
+<select [(ngModel)]="Curso_solicitado" >
+    <option value="IFCD0110">Desarrollo web</option>
+    <option value="IFCD0111">Programación estructurado</option>
+    <option value="IFCD0112">Programación Orientada a Objetos</option>
+ </select>
+ <br>
+ Escriba el nivel de estudio : 
+ <select [(ngModel)]="Nivel_de_estudio" >
+    <option value="ESO">ESO</option>
+    <option value="Bachillerato">Bachillerato</option>
+    <option value="FP">FP</option>
+ </select>
+ <br>
+<button (click)="onSubmit()">Enviar</button>
+
+
