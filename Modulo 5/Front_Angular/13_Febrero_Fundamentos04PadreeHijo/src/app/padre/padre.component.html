@@ -1,0 +1,8 @@
+<p> Componente padre </p>
+<div>
+    <label>Dato a pasar al hijo</label>
+    <input type="text" [(ngModel)]="dato">
+    <br>
+    <p>Dato escrito por el usuario</p>
+    <app-hijo [datoHijo]="dato"></app-hijo>
+</div>
