@@ -1,0 +1,7 @@
+<h2>Asignaturas Seleccionadas</h2>
+<ul>
+    @for (elemento of AsignaturasSeleccionadas; track $index) {
+        <li>{{elemento}}</li>
+    }
+</ul>
+<app-hijo2 (enviarPadre)="recogerdatos($event)"></app-hijo2>
