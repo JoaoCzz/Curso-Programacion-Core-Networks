@@ -1,1 +1,7 @@
-<p>factura-hijo works!</p>
+<button type="button" (click)="agregar()">Agregar</button>
+<ol>
+  
+@for (elemento of facturas; track $index) {
+    <li>{{elemento}}</li>
+}
+</ol>
