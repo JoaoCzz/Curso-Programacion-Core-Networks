@@ -1,0 +1,36 @@
+
+<h1>Registro</h1>
+div>label+input:text+br+label+input:date+br
+
+<div>
+    <label> Nombre:</label>
+    <input type="text" [(ngModel)]="nombre" placeholder="Escriba su nombre">
+    <br>
+    <label> Fecha de nacimiento:</label>
+    <input type="date" [(ngModel)]="fechaNacimiento">
+    <br>
+    <label>Nacionalidad:</label>
+    <select [(ngModel)]="nacionalidad">
+        <option values="Española"> Española</option>
+        <option values="Britanica"> Britanica</option>
+        <option values="Rusa">Rusa </option>
+        <option values="Americana"> Americana</option>
+        <option values="Mexicana">Mexicana </option>
+    </select>
+    <br>
+    <label>Genero: </label>
+    <br>
+    Mujer: <input type="radio" name="genero"  [(ngModel)]="genero" value="Mujer">
+    Hombre: <input type="radio" name="genero"[(ngModel)]="genero" value="Hombre">
+    Otros: <input type="radio" name="genero"[(ngModel)]="genero" value="Otros">
+    <br>
+    <label>Lenguajes de programacion: </label>
+    <br>
+    C++<input type="checkbox" [(ngModel)]="cmas">
+    Java<input type="checkbox" [(ngModel)]="java">
+    Js<input type="checkbox" [(ngModel)]="js">
+    Phyton<input type="checkbox" [(ngModel)]="pynthons">
+    <br>
+    <button (click)="mostrarinfo()"> Enviar la informacion</button>
+
+</div>
