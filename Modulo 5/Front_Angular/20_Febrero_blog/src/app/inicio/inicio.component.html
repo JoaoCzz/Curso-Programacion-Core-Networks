@@ -1,11 +1,12 @@
+<img width="1100px" src="https://i.redd.it/rprze5xd9fk31.png" alt="hacker">
+<p></p>
 @for(elemento of articulos; track elemento.id){
     <div class="gallery">
     <a [routerLink]="['/detalle',elemento.id]" >
         <img src="{{elemento.imagen}}" alt="{{elemento.titulo}}" width="600" height="400">
-      </a>
       <div class="desc titulo">{{elemento.titulo}}</div>
       <div class="desc">{{elemento.resumen}}</div>
       <button class="button button2"> Mas informacion</button>
+    </a>
     </div>
-    
 }
