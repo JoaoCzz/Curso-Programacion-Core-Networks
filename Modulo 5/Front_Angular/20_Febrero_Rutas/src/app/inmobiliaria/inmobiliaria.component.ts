@@ -18,6 +18,7 @@ export class InmobiliariaComponent implements OnInit{
   constructor(private inmuebleServicio: InmobiliariaService){}
   
   ngOnInit(): void {
+    this.inmuebles=this.inmuebleServicio.ObtenerTodos();
     
   }
   

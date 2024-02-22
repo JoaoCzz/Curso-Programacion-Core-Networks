@@ -4,7 +4,7 @@ import { Inmueble } from '../_modelo/inmueble';
 @Injectable({
   providedIn: 'root'
 })
-export class InmobiliariaServicioService {
+export class InmobiliariaService {
   inmuebles:Inmueble[]=[
     {
       "referencia":"1",

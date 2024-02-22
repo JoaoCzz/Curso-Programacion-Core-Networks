@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+<h2>Lista de cursos</h2>
+<ul>
+    @for (elemento of cursos; track elemento._id) {
+        <li>
+            {{elemento._id}} - {{elemento._nombre}} - {{elemento._duracion}}
+            horas - {{elemento._nivel}}
+            <button [routerLink]="['/modificacion',elemento._id]"> Modificar</button>
+        </li>
+    }
+    <button [routerLink]="['/alta']">Alta</button>
+</ul>

@@ -1,20 +1,21 @@
-<table>
+<div>
+  <table>
     <tr>
-      <th>Referencia</th>
-      <th>Descripcion</th>
-      <th>Imagen</th>
+      <th>Inmuebles disponibles</th>
+      
     </tr>
-    @for (item of inmuebles; track item.referencia) {
+    @for(elemento of inmuebles; track elemento.referencia) {
     <tr>
-      <td>
-        {{ item.referencia }}
-      </td>
-      <td><p>{{item.descripcion}}</p></td>
-      <td><a
-        [routerLink]="['/detalle', item.referencia]"
-        routerLinkActive="router-link-active"
-        ><img [src]="item.img" width="240px" [alt]="item.descripcion"></a
-        ></td>
+      <a
+        [routerLink]="['/detalle', elemento.referencia]"         
+      >
+        <td>{{ elemento.referencia }}</td>
+       
+        <td><img  src="{{ elemento.img }}" alt="" /></td>
+        <td>{{ elemento.descripcion }}</td>
+      </a>
+      
     </tr>
     }
   </table>
+</div>

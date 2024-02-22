@@ -1,4 +1,13 @@
-<section class="container">
-    <img [src]="inmueble.img" alt="lorem picsum">
-    <p>{{inmueble.descripcion}}</p>
-</section>
+<h1>Detalle de la casita que te vas a comprar</h1>
+<table>
+    <tr>
+      <th>Referencia</th>
+      <th>Imagen</th>
+      <th>Descripcion</th>
+    </tr>   
+    <tr>
+        <td>{{ inmueble.referencia }}</td>
+        <td width="50%"><img  src="{{ inmueble.img }}" /></td>
+        <td>{{ inmueble.descripcion }}</td> 
+    </tr>    
+  </table>
