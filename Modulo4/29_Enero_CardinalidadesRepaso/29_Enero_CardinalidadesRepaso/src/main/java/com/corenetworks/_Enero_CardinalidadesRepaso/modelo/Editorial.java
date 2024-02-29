@@ -1,5 +1,6 @@
 package com.corenetworks._Enero_CardinalidadesRepaso.modelo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,8 +21,9 @@ public class Editorial {
     private String Direccion;
     @Column(length = 30,nullable = false)
     private String nombreEditorial;
-    @OneToMany(mappedBy = "editorial",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-   private List<Libro> Libros;
+
+//    @OneToMany(mappedBy = "editorial",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+//   private List<Libro> Libros;
 
 
 }

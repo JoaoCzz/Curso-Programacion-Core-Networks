@@ -21,7 +21,6 @@ public class Libro {
     private double precio;
     @Column(nullable = false,length = 60)
     private String titulo;
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_editorial",nullable = false,foreignKey = @ForeignKey(name = "FK_libros_editoriales"))
     private Editorial editorial;

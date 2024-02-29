@@ -11,21 +11,21 @@ import java.util.List;
 public class IEditorialServicioimpl implements IEditorialServicio{
     @Autowired
     private IEditorialRepositorio ir;
-    @Override
-    public Editorial insertaUno(Editorial e) {
-        for (Libro elemento: e.getLibros()){
-            elemento.setEditorial(e);
-        }
-        return ir.save(e);
-    }
-
-    @Override
-    public Editorial modificarUno(Editorial e) {
-        for (Libro elemento: e.getLibros()){
-            elemento.setEditorial(e);
-        }
-        return ir.save(e);
-    }
+//    @Override
+//    public Editorial insertaUno(Editorial e) {
+//        for (Libro elemento: e.getLibros()){
+//            elemento.setEditorial(e);
+//        }
+//        return ir.save(e);
+//    }
+//
+//    @Override
+//    public Editorial modificarUno(Editorial e) {
+//        for (Libro elemento: e.getLibros()){
+//            elemento.setEditorial(e);
+//        }
+//        return ir.save(e);
+//    }
 
     @Override
     public void EliminarUno(int id) {

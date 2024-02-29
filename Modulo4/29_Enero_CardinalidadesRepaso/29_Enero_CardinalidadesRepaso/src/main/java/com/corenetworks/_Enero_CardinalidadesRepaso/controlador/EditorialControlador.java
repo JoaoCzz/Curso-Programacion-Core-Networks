@@ -12,10 +12,10 @@ import java.util.List;
 public class EditorialControlador {
     @Autowired
     private IEditorialServicio servicio;
-@PostMapping
-    public Editorial insertarUno(@RequestBody Editorial e){
-        return servicio.insertaUno(e);
-    }
+//@PostMapping
+//    public Editorial insertarUno(@RequestBody Editorial e){
+//        return servicio.insertaUno(e);
+//    }
     @GetMapping
     public List<Editorial>ObtenerTodos(){
     return servicio.obtenerTodos();
@@ -28,10 +28,10 @@ public class EditorialControlador {
     public Editorial BuscarUno(@PathVariable (name = "id")int id){
     return servicio.BuscarUno(id);
     }
-    @PutMapping
-    public Editorial modificarUno(@RequestBody Editorial e){
-    return servicio.modificarUno(e);
-    }
+//    @PutMapping
+//    public Editorial modificarUno(@RequestBody Editorial e){
+//    return servicio.modificarUno(e);
+//    }
     @GetMapping("/filtro/{direccion}")
     public List<Editorial> FiltroPorDireccion (@PathVariable (name = "direccion") String direccion){
     return servicio.filtroPorDireccion(direccion);
@@ -45,4 +45,5 @@ public class EditorialControlador {
     public List<Editorial> FiltroPorLetra(@PathVariable(name = "letra")char letra){
     return servicio.filtroPorLetra(letra);
     }
+
 }
